@@ -7,11 +7,11 @@ _logger = logging.getLogger(__name__)
 # DEFAULT CONFIGURATION
 
 ODOO_HOST = 'localhost'
-ODOO_PORT = 9069
+ODOO_PORT = 8069
 ODOO_POLLING_PORT = 8072
 ODOO_DB = 'odoo10_asterisk'
-ODOO_USER = 'admin'
-ODOO_PASSWORD = 'admin'
+ODOO_USER = 'odoo'
+ODOO_PASSWORD = 'odoo'
 ODOO_RECONNECT_TIMEOUT = 3 # Second
 ARI_RECONNECT_TIMEOUT = 3
 ARI_ORIGINATE_TIMEOUT = 120 # 120 seconds for channel originate
@@ -22,7 +22,8 @@ AMI_RELOAD_PAUSE = 2 # 2 seconds between AMI connection reload
 ASTERISK_HELPER_URL = 'http://localhost:8010'
 
 conf = {
-    'host': '192.168.56.102',
+    # see your /etc/asterisk/manager.conf, /etc/asterisk/ari.conf
+    'host': '127.0.0.1',
     'ami_port': 5038,
     'http_port': 8088,
     'ami_username': 'asterisk_admin',
